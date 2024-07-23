@@ -3,7 +3,7 @@ locals {
   location            = "East US"
 
   vnet_name           = "tcl-vnet"
-  public_subnet_name  = "public"
+  public_subnet_name  = "AzureBastionSubnet"
   private_subnet_name = "private"
 
   vm_network_interface_name = "tcl-nic"
@@ -12,4 +12,7 @@ locals {
   vm_name           = "tcl-vm"
   vm_admin_username = "adminuser"
   vm_admin_password = "P@$$w0rd1234!"
+
+  bastion_public_ip_name = "tcl-bastion-public-ip"
+  bastion_host_name      = "tcl-bastion"
 }

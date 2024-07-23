@@ -20,3 +20,11 @@ resource "azurerm_subnet" "private" {
   virtual_network_name = local.vnet_name
   address_prefixes     = ["10.0.2.0/24"]
 }
+
+resource "azurerm_public_ip" "public-ip" {
+  name                = "tcl-pip"
+  location            = local.location
+  resource_group_name = local.resource_group_name
+  allocation_method   = "Static"
+  sku                 = "Standard"
+}
